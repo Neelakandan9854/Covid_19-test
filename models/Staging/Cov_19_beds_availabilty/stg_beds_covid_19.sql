@@ -5,10 +5,10 @@ source19 as (
 
 transformed as (
     select 
-    b.state,
-    b.date,
-    b.inpatient_beds_occupied, 
-    b.total_inpatient_beds 
+    coalesce (state ,0),
+    date,
+    coalesce (inpatient_beds_occupied,0), 
+    coalesce (total_inpatient_beds,0) 
     from source19 b
 )
 

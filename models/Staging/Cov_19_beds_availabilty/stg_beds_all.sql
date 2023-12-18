@@ -6,10 +6,10 @@ with
 
     transformed as (
         select 
-        a.state,
-        a.date,
-        a.inpatient_beds_occupied,
-        a.total_inpatient_beds
+        coalesce (state ,null),
+        date,
+        coalesce (inpatient_beds_occupied,0),
+        coalesce (total_inpatient_beds,0)
 
         from source a
     )
