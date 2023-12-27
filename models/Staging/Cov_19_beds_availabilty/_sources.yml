@@ -7,3 +7,4 @@ sources:
       - name: CDC_INPATIENT_BEDS_ALL
       - name: CDC_INPATIENT_BEDS_COVID_19
       - name: CDC_INPATIENT_BEDS_ICU_ALL
+      - name: JHU_COVID_19

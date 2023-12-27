@@ -5,11 +5,11 @@ with
 
     transformed as (
         select
-        coalesce (state,0),
-        date, 
-        coalesce (staffed_adult_icu_beds_occupied,0), 
-        coalesce (total_staffed_icu_beds,0)
-        from sourceicu c
+        state,
+        date,
+        COALESCE (staffed_adult_icu_beds_occupied,0) as staffed_adult_icu_beds_occupied,
+        COALESCE (total_staffed_icu_beds ,0) as total_staffed_icu_beds 
+     from sourceicu 
     )
 
 select *from transformed
