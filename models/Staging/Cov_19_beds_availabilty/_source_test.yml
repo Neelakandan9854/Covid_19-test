@@ -1,0 +1,62 @@
+version: 2
+
+models:
+  - name: stg_beds_all
+    columns:
+      - name: state
+        tests:
+          - not_null
+      - name: date
+        tests:
+          - not_null
+      - name: inpatient_beds_occupied
+        tests:
+          - not_null
+      - name: total_inpatient_beds
+        tests:
+          - not_null
+
+  - name: stg_beds_covid_19 
+    columns:
+      - name: state
+        tests:
+          - not_null
+      - name: date
+        tests:
+          - not_null
+      - name: inpatient_beds_occupied
+        tests:
+          - not_null
+      - name: total_inpatient_beds
+        tests:
+          - not_null   
+
+  - name: stg_icu_beds 
+    columns:
+      - name: state
+        tests:
+          - not_null
+      - name: date
+        tests:
+          - not_null
+      - name: staffed_adult_icu_beds_occupied
+        tests:
+          - not_null
+      - name: total_staffed_icu_beds
+        tests:
+          - not_null 
+
+  - name: stg_situation_reports 
+    columns:
+      - name: cases_new
+        tests:
+          - not_null
+      - name: case_type
+        tests:
+          - not_null
+      - name: ISO3166_1
+        tests:
+          - not_null
+      
+
+       
